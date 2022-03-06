@@ -7,9 +7,8 @@ class CreateCategoryController {
     handle(request: Request, response: Response): Response{
         const {name, description} = request.body;
 
-        this.createCategoryService = new CreateCategoryUseCase(categoriesRepository);
-        createCategoryService.execute({name, description});
-    
+        this.CreateCategoryUseCase.execute({name, description}pository);
+        
         return response.status(201).send();
     }
 }
